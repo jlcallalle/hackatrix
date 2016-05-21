@@ -22,9 +22,14 @@
 
 .main, {
     h1 {
-        font-size: 30px;
-        text-align: center;
-        text-transform: uppercase;
+       // background: #111 -moz-linear-gradient(center bottom , #005199 20%, #0069aa 80%) repeat scroll 0 0;
+	    background: #185F7D;
+	    color: white;
+	    font-size: 28px;
+	    margin: 0 0 15px;
+	    padding: 14px 0;
+	    text-align: center;
+	    text-transform: uppercase;
     }
     h2 {
     	text-align: center;
