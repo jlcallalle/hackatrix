@@ -10,7 +10,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
+  <script>
+    function initialize() {
+    var myLatlng = new google.maps.LatLng(-12.0729971,-76.9504546);
+    var mapOptions = {
+    zoom: 17,
+    scrollwheel: false,
+    center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById('mapa'), mapOptions);
+    
+    var marker = new google.maps.Marker({
+    icon: "http://metropolitan-redesign.medialabla.net/interfaces/images/hoteles/logo-marker.png",
+    position: myLatlng,
+    map: map,
+    title: ''
+    });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+    
+  </script>
   <body>
     <header>
       <div class="container">
@@ -53,6 +75,7 @@
                 <th>Ruta</th>
                 <th>Linea</th>
                 <th>Distancia</th>
+                <th> </th>
               </tr>
             </thead>
             <tbody>
@@ -60,24 +83,31 @@
                 <td>ruta1</td>
                 <td>linea1</td>
                 <td>10km</td>
+                <td><a href="#">ver mapa</a></td>
               </tr>
               <tr>
                 <td>ruta1</td>
                 <td>linea1</td>
                 <td>10km</td>
+                <td><a href="#">ver mapa</a></td>
               </tr>
               <tr>
                 <td>ruta1</td>
                 <td>linea1</td>
                 <td>10km</td>
+                <td><a href="#">ver mapa</a></td>
               </tr>
               <tr>
                 <td>ruta1</td>
                 <td>linea1</td>
                 <td>10km</td>
+                <td><a href="#">ver mapa</a></td>
               </tr>
             </tbody>
           </table>
+        </div>
+        <div class="contenido-mapa">
+          <div id="mapa" class="mapa"></div>
         </div>
       </div>
     </main>
