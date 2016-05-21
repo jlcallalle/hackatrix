@@ -1,7 +1,7 @@
 extends ../plantillas/plantilla-principal
 
 block title
-    -var proyecto = {nombre: 'notepierdas', seccion: 'belatrix'}
+    -var proyecto = {nombre: 'Hackatrix', seccion: 'No te pierdas'}
     title #{proyecto.nombre} | #{proyecto.seccion}
 
 block description
@@ -11,20 +11,54 @@ block content
         .container.main
             h1 no te pierdas
             .contenido-mapa
-                 .contenido-destino
+                 //.contenido-destino
                     .row
-                        span punto de partida
+                        span Punto de partida
                         input(type="text")
                     .row
-                        span punto de llegada
+                        span Punto de llegada
                         input(type="text")
-                .contenido-boton
+
+                form.form-horizontal
+                    .form-group
+                        label.col-sm-2 Punto de partida
+                        .col-sm-10
+                            input(type="text").form-control
+                    .form-group
+                        label.col-sm-2 Punto de llegada
+                        .col-sm-10
+                            input(type="text").form-control
+
+                    .contenido-boton
                          a(href="#").btn.btn-lg.btn-primary pon tu ruta
 
-                .contenido-tabla
-                    
+                
 
-
+                .contenido-tabla.table-responsive
+                    table.table.table-striped.table-bordered.table-hover.table-condensed
+                        thead
+                            tr
+                                th Ruta
+                                th Linea
+                                th Distancia
+                        tbody
+                            tr
+                                td ruta1
+                                td linea1
+                                td 10km
+                            tr
+                                td ruta1
+                                td linea1
+                                td 10km
+                            tr
+                                td ruta1
+                                td linea1
+                                td 10km
+                            tr
+                                td ruta1
+                                td linea1
+                                td 10km
+    
             
          
 
